@@ -13,11 +13,11 @@ form.addEventListener("submit", function(e){
     const corpoLista = document.querySelector("ul");
     corpoLista.innerHTML = linhas;
     resetForms();
-});
 
-$("ul").click(function(){
-    $(this).toggleClass("concluido");
-})
+    $("ul").on('click', 'li', function() {
+        $(this).toggleClass('concluido');
+    });
+});
 
 function resetForms() {
     document.getElementById("forms").reset();
